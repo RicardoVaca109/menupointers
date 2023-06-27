@@ -16,9 +16,10 @@ int imprimirMenu()
     printf("\t1) Ver productos\n");
     printf("\t2) Ingreso de producto\n");
     // printf("\t3) Modificar productos\n");
-    printf("\t3) Ver productos Ingresados:\n");
-     printf("\t4) Eliminar Productos\n");
-    printf("\t5) Salir\n");
+    printf("\t3) Ver productos Ingresados\n");
+    printf("\t4) Eliminar Productos de Inventario original\n");
+    printf("\t5) Eliminar Productos de Inventario agregado\n");
+    printf("\t6) Salir\n");
     printf("Selecione una opcion: ");
     scanf("%d", &opcion);
     return opcion;
@@ -100,3 +101,29 @@ void mostrarProductostwo( int *ids,  char nombres[][maxChar],  char descripcione
     siguiente();
     
 }
+/*
+void eliminarProducto(int identificacion[10], char nombre[10][10], char descripcion[10][15],
+                      float cantidad[10], char unidades[10][10], float precio[10], int tot, float preciot[10])
+{
+    int id;
+    printf("---- Eliminar Producto ----\n");
+    printf("Ingrese el ID del producto a eliminar: ");
+    scanf("%d", &id);
+    for (int i = 0; i < tot; i++)
+    {
+        if (identificacion[i] == id)
+        {
+            for (int j = i; j < tot - 1; j++)
+            {
+                identificacion[j] = identificacion[j + 1];
+                strcpy(nombre[j], nombre[j + 1]);
+                strcpy(descripcion[j], descripcion[j + 1]);
+                cantidad[j] = cantidad[j + 1];
+                strcpy(unidades[j], unidades[j + 1]);
+                precio[j] = precio[j + 1];
+            }
+        }
+    }
+    preciot[id - 1] = 0;
+}
+*/

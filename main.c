@@ -48,16 +48,20 @@ int main (int argc, char *argv[]) {
         case 3:
             system("cls");
             mostrarProductostwo(ids,nombreSong,generoSong,album,integrantes,precioTickets);
-        default:
             break;
+        /*case 4:
+            system("cls");
+
+            break;
+        case 5:
+            system("cls");
+            break;
+        case 6: 
+            continuar = 0;
+            printf("Gracias por utilizar el sistema de inventarios\n");
+            break;*/
         }
     }
-    
-
-    
-
-
-
     //ingresarProductos(ids, nombreSong, generoSong, album, integrantes, precioTickets);
     //mostrarProductos(ids, nombreSong, generoSong, album, integrantes, precioTickets);
     //printf("%s is over %d years old.\n", NAME, AGE);
