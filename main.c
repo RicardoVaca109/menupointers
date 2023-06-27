@@ -4,6 +4,7 @@
 #include <string.h>
 #include <conio.h>
 #define ctdProduct 5
+#define ingProduct 5
 #define maxChar 50
 
 int main (int argc, char *argv[]) {
@@ -23,12 +24,12 @@ int main (int argc, char *argv[]) {
     float precioTickq[ctdProduct] = {35.9, 30.6 , 35.9, 24.9 , 45.8};
 
     //varibles para los productos que el ususario agrega
-    int ids[ctdProduct]; 
-    char nombreSong[ctdProduct][maxChar];
-    char generoSong[ctdProduct][maxChar];
-    char album[ctdProduct][maxChar];
-    int integrantes [ctdProduct];
-    float precioTickets [ctdProduct];
+    int ids[ingProduct]; 
+    char nombreSong[ingProduct][maxChar];
+    char generoSong[ingProduct][maxChar];
+    char album[ingProduct][maxChar];
+    int integrantes [ingProduct];
+    float precioTickets [ingProduct];
 
     while (continuar)
     {

@@ -4,6 +4,7 @@
 #include <string.h>
 #include <conio.h>
 #define ctdProduct 5
+#define ingProduct 5
 #define maxChar 50
 
 int imprimirMenu()
@@ -22,13 +23,16 @@ int imprimirMenu()
     scanf("%d", &opcion);
     return opcion;
 }
-
+void siguiente()
+{
+    printf("Presione una tecla para continuar:");
+    getch();
+}
 void mostrarProductos( int *ids,  char nombres[][maxChar],  char descripciones[][maxChar],  char marcas[][maxChar],  int *cantidades,  float *precios)
 {
     printf("---------------------------------------------------------------\n");
     printf("Productos en Inventario:\n");
-
-    for (int i = 0; i < 6; i++)
+    for (int i = 0; i < ctdProduct; i++)
         {
         printf("Producto %d:\n", i + 1);
         printf("ID: %d\n", ids[i]);
@@ -37,10 +41,10 @@ void mostrarProductos( int *ids,  char nombres[][maxChar],  char descripciones[]
         printf("Album: %s\n", marcas[i]);
         printf("Integrantes: %d\n", cantidades[i]);
         printf("Precio Tickets: %.2f\n", precios[i]);
-        
         printf("\n");
+        
         }
-    
+    siguiente();
 }
 
 void ingresarProductos(int *ids, char nombreSong[][maxChar], char generoSong[][maxChar], char album[][maxChar], int *integrantes, float *precioTick)
@@ -48,7 +52,7 @@ void ingresarProductos(int *ids, char nombreSong[][maxChar], char generoSong[][m
 
     printf("Ingresar datos para cada producto:\n");
 
-    for (int i = 0; i < ctdProduct; i++)
+    for (int i = 0; i < ingProduct; i++)
     {
         printf("Producto %d:\n", i + 1);
 
@@ -71,7 +75,9 @@ void ingresarProductos(int *ids, char nombreSong[][maxChar], char generoSong[][m
         scanf("%f", &precioTick[i]);
 
         printf("\n");
+        
     }
+    siguiente();
 }
 
 void mostrarProductostwo( int *ids,  char nombres[][maxChar],  char descripciones[][maxChar], char marcas[][maxChar],  int *cantidades,  float *precios)
@@ -79,7 +85,7 @@ void mostrarProductostwo( int *ids,  char nombres[][maxChar],  char descripcione
     printf("***************************************************************\n");
     printf("Productos ingresados:\n");
 
-    for (int i = 0; i < ctdProduct; i++)
+    for (int i = 0; i < ingProduct; i++)
     {
         printf("Producto %d:\n", i + 1);
         printf("ID: %d\n", ids[i]);
@@ -89,6 +95,8 @@ void mostrarProductostwo( int *ids,  char nombres[][maxChar],  char descripcione
         printf("Integrantes: %d\n", cantidades[i]);
         printf("Precio Tickets: %.2f\n", precios[i]);
         printf("\n");
+        
     }
+    siguiente();
     
 }
