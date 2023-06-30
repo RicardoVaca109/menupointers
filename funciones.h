@@ -1,8 +1,6 @@
-#define ctdProduct 5
-#define maxChar 50
-#define ingProduct 5
 int imprimirMenu();
 void siguiente();
-void ingresarProductos(int *ids, char nombreSong[][maxChar], char generoSong[][maxChar], char album[][maxChar], int *integrantes, float *precioTick);
-void mostrarProductos(int *ids,  char nombres[][maxChar], char descripciones[][maxChar], char marcas[][maxChar], int *cantidades, float *precios);
-void mostrarProductostwo( int *ids,  char nombres[][maxChar],  char descripciones[][maxChar],  char marcas[][maxChar], int *cantidades,  float *precios);
+void imprimirProductos(int identificacion[10], char nombre[][50], char descripcion[][50],char unidades[][50], int cantidad[10], int totales,  float precio[10]);
+void leerProducto(int identificacion[10], char nombre[][50], char descripcion[][50],char unidades[][50], int cantidad[10],  float precio[10], int tot);
+void modificarProducto(int identificacion[10], char nombre[][50], char descripcion[][50],char marcas[][50], int cantidades[10], float precios[10]);
+void eliminarProducto(int identificacion[10], char nombre[][50], char descripcion[][50],char unidades[][50], int cantidad[10],  float precio[10], int tot);

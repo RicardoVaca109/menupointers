@@ -3,33 +3,21 @@
 #include <stdlib.h>
 #include <string.h>
 #include <conio.h>
-#define ctdProduct 5
-#define ingProduct 5
-#define maxChar 50
+
 
 int main (int argc, char *argv[]) {
-    int opcion, continuar; // variables para el menu
-    //char opcion2;
+    int opcion, continuar; 
 
-    int productTotal = 5; //variables quemadas del inventario
+    int ctdcanciones= 5; //variables quemadas del inventario
 
-    int idq[ctdProduct]={1, 2, 3, 4, 5};
-    char nombreq [ctdProduct][maxChar] = {{"Throne"}, {"Ecstasy"}, {"AmEN!"}, {"Loser"}, 
-    {"Hypnosis"}};
-    char generoq[ctdProduct][maxChar] = {{"Rock Alternativo"}, {"Rock"}, 
-    {"Rock Alternativo"}, {"Rock"}, {"Metal Progresivo"}};
-    char albumq[ctdProduct][maxChar] = {{"Thats the Spirit"}, {"Ecstasy"}, {"AmEN!"}, {"The Better Life"},
-     {"This Place Will Become Your Tomb"}};
-    int integrantesq[ctdProduct] = {7, 4, 7, 5, 4};
-    float precioTickq[ctdProduct] = {35.9, 30.6 , 35.9, 24.9 , 45.8};
-
-    //varibles para los productos que el ususario agrega
-    int ids[ingProduct]; 
-    char nombreSong[ingProduct][maxChar];
-    char generoSong[ingProduct][maxChar];
-    char album[ingProduct][maxChar];
-    int integrantes [ingProduct];
-    float precioTickets [ingProduct];
+    int idq[10]={1,2,3,4,5};
+    char nombreq [10][50] = {{"Throne"},{"Hell"},{"AmEN!"},{"Loser"}, 
+    {"Euclid"}};
+    char generoq[10][50] = {{"Rock"},{"Rock"},{"Rock"}, {"Rock"},{"Metal"}};
+    char albumq[10][50] = {{"Spirit"},{"Ecstasy"},{"AmEN!!!"},{"BetLife"},
+     {"UrTomb"}};
+    int integrantesq[10] = {7,4,7,5,4};
+    float precioTickq[10] = {35.9,30.6,35.9,24.9,45.8};
 
     while (continuar)
     {
@@ -39,27 +27,27 @@ int main (int argc, char *argv[]) {
         {
         case 1:
             system("cls");
-            mostrarProductos(idq,nombreq,generoq,albumq,integrantesq,precioTickq);
+            imprimirProductos(idq,nombreq,generoq,albumq,integrantesq,ctdcanciones,precioTickq);
             break;
         case 2:
             system("cls");
-            ingresarProductos(ids,nombreSong,generoSong,album,integrantes,precioTickets);
+            leerProducto(idq,nombreq,generoq,albumq,integrantesq,precioTickq, ctdcanciones);
+            ctdcanciones++;
             break;
         case 3:
             system("cls");
-            mostrarProductostwo(ids,nombreSong,generoSong,album,integrantes,precioTickets);
+            modificarProducto(idq,nombreq,generoq,albumq,integrantesq,precioTickq);
             break;
-        /*case 4:
+        case 4:
             system("cls");
+            eliminarProducto(idq,nombreq,generoq,albumq,integrantesq,precioTickq,ctdcanciones);
+            ctdcanciones--;
 
             break;
         case 5:
-            system("cls");
-            break;
-        case 6: 
+            printf("Saliendo........\n");
             continuar = 0;
-            printf("Gracias por utilizar el sistema de inventarios\n");
-            break;*/
+            break;
         }
     }
     //ingresarProductos(ids, nombreSong, generoSong, album, integrantes, precioTickets);
