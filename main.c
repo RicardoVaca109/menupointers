@@ -50,8 +50,6 @@ int main (int argc, char *argv[]) {
             break;
         }
     }
-    //ingresarProductos(ids, nombreSong, generoSong, album, integrantes, precioTickets);
-    //mostrarProductos(ids, nombreSong, generoSong, album, integrantes, precioTickets);
-    //printf("%s is over %d years old.\n", NAME, AGE);
+    
     return 0;
 }
